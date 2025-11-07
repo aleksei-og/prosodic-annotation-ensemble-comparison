@@ -34,5 +34,3 @@
 - **ADASYN** (Adaptive Synthetic Sampling)
 - **Random UnderSampling**
 - **Class Weight Balancing**
-git clone https://github.com/aleksei-og/prosodic-annotation-ensemble-comparison.git
-cd prosodic-annotation-ensemble-comparison
