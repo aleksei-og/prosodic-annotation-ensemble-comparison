@@ -13,24 +13,44 @@
 - **Сравнение моделей**: Анализ эффективности базовых и ансамблевых алгоритмов
 - **Отбор признаков**: Улучшение качества моделей через селекцию наиболее информативных признаков
 
-## Методы и алгоритмы
+## Структура проекта
 
-### Базовые классификаторы
-- Random Forest
-- SVM (Linear/RBF)
-- Logistic Regression
-- K-Nearest Neighbors
-- Gaussian Naive Bayes
+### Файлы проекта
 
-### Ансамблевые методы
-- **Voting Classifier** (мягкое голосование)
-- **Stacking Classifier** (мета-обучение)
-- **Gradient Boosting**
-- **AdaBoost**
-- **Extra Trees**
+| Файл | Описание |
+|------|----------|
+| **`base_classifier.py`** | Базовые классификаторы и фундаментальный анализ данных. Содержит функции для загрузки JSON, извлечения признаков и сравнения базовых алгоритмов ML. |
+| **`json_ensembles.py`** | Ансамблевые методы машинного обучения. Реализует Voting, Stacking, Gradient Boosting, AdaBoost и другие продвинутые подходы. |
+| **`balanced_classes.py`** | Методы обработки дисбаланса классов. Включает SMOTE, ADASYN, RandomUnderSampler и анализ влияния балансировки на качество моделей. |
+| **`feature_selection.py`** | Отбор и улучшение признаков. Содержит методы mutual information, feature importance и создание новых синтетических признаков. |
+| **`requirements.txt`** | Зависимости проекта с точными версиями пакетов для воспроизводимости результатов. |
+| **`README.md`** | Документация проекта с инструкциями по установке и использованию. |
 
-### Методы балансировки
-- **SMOTE** (Synthetic Minority Over-sampling)
-- **ADASYN** (Adaptive Synthetic Sampling)
-- **Random UnderSampling**
-- **Class Weight Balancing**
+## Детальное описание модулей
+
+### `base_classifier.py`
+- **Загрузка данных**: Парсинг JSON файлов разметки Label Studio
+- **Извлечение признаков**: 70+ расширенных временных и статистических признаков
+- **Базовые модели**: Сравнение Random Forest, SVM, Logistic Regression, KNN, Naive Bayes
+- **Визуализация**: Распределение классов, матрицы ошибок, важность признаков
+
+### `json_ensembles.py`
+- **Ансамблевые методы**: Voting (мягкое/жесткое), Stacking, Bagging, Boosting
+- **Gradient Boosting**: Оптимизированные реализации с подбором гиперпараметров
+- **Сравнительный анализ**: Рейтинг моделей по точности и времени выполнения
+- **Мета-обучение**: Stacking с логистической регрессией в качестве финального estimator
+
+### `balanced_classes.py`
+- **Методы балансировки**: SMOTE, ADASYN, SMOTEENN, RandomUnderSampler
+- **Взвешивание классов**: Automatic class weight computation
+- **Сравнение стратегий**: Анализ эффективности разных подходов к дисбалансу
+- **Визуализация**: Графики распределения классов до/после балансировки
+
+### `feature_selection.py`
+- **Отбор признаков**: Mutual Information, Random Forest Importance
+- **Создание признаков**: Генерация новых синтетических признаков на основе анализа важности
+- **Комбинированные методы**: Балансировка разных типов признаков в финальном наборе
+- **Оптимизация ансамблей**: Улучшенные модели с отобранными признаками
+```bash
+git clone https://github.com/aleksei-og/prosodic-annotation-ensemble-comparison.git
+cd prosodic-annotation-ensemble-comparison
