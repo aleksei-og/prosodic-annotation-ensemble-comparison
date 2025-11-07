@@ -1,0 +1,38 @@
+# Comparative Analysis of ML Ensembles for Prosodic Annotation
+
+Сравнительный анализ ансамблей машинного обучения для автоматизации просодической разметки аудиокорпуса английского языка.
+
+## О проекте
+
+Этот проект посвящен сравнительному анализу различных ансамблевых методов машинного обучения для задачи автоматической просодической разметки аудио сегментов. Исследование включает извлечение расширенных временных признаков, обработку дисбаланса классов и сравнение эффективности различных подходов.
+
+## Основные задачи
+
+- **Извлечение признаков**: Создание расширенных временных и статистических признаков из аудио сегментов
+- **Балансировка классов**: Применение различных методов обработки дисбаланса (SMOTE, ADASYN, undersampling)
+- **Сравнение моделей**: Анализ эффективности базовых и ансамблевых алгоритмов
+- **Отбор признаков**: Улучшение качества моделей через селекцию наиболее информативных признаков
+
+## Методы и алгоритмы
+
+### Базовые классификаторы
+- Random Forest
+- SVM (Linear/RBF)
+- Logistic Regression
+- K-Nearest Neighbors
+- Gaussian Naive Bayes
+
+### Ансамблевые методы
+- **Voting Classifier** (мягкое голосование)
+- **Stacking Classifier** (мета-обучение)
+- **Gradient Boosting**
+- **AdaBoost**
+- **Extra Trees**
+
+### Методы балансировки
+- **SMOTE** (Synthetic Minority Over-sampling)
+- **ADASYN** (Adaptive Synthetic Sampling)
+- **Random UnderSampling**
+- **Class Weight Balancing**
+git clone https://github.com/aleksei-og/prosodic-annotation-ensemble-comparison.git
+cd prosodic-annotation-ensemble-comparison
