@@ -1,0 +1,39 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Файлы данных (ОЧЕНЬ ВАЖНО - не коммитить!)
+*.csv
+*.json
+*.pkl
+*.pickle
+*.model
+*.h5
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# PyCharm
+*.iml
+*.ipr
+*.iws
+
+# Логи и результаты
+logs/
+output/
+results/
+*.log
+
+# Временные файлы
+.DS_Store
+Thumbs.db
