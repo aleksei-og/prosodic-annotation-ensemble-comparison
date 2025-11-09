@@ -51,6 +51,3 @@
 - **Создание признаков**: Генерация новых синтетических признаков на основе анализа важности
 - **Комбинированные методы**: Балансировка разных типов признаков в финальном наборе
 - **Оптимизация ансамблей**: Улучшенные модели с отобранными признаками
-```bash
-git clone https://github.com/aleksei-og/prosodic-annotation-ensemble-comparison.git
-cd prosodic-annotation-ensemble-comparison
